@@ -1,4 +1,17 @@
+import { useEffect, useState } from 'react';
+
 function Footer() {
+  const [info, setInfo] = useState({});
+
+  useEffect(() => {
+    localStorage.setItem('userAgent', navigator.userAgent);
+    localStorage.setItem('platform', navigator.platform);
+    setInfo({
+      userAgent: localStorage.getItem('userAgent'),
+      platform: localStorage.getItem('platform'),
+    });
+  }, []);
+
   return (
     <footer className="bg-slate-800 text-white p-8 mt-8">
       <div className="max-w-4xl mx-auto">
@@ -17,6 +30,10 @@ function Footer() {
             </a>
           </li>
         </ul>
+        <div className="mt-6 text-sm text-slate-300">
+          <p><b>userAgent:</b> {info.userAgent}</p>
+          <p><b>platform:</b> {info.platform}</p>
+        </div>
       </div>
     </footer>
   );
