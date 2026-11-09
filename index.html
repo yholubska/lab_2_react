@@ -118,5 +118,29 @@
          </ul>
   </footer>
 
+<section id="reviews">
+  <h2>Відгуки колишніх роботодавців</h2>
+  <div id="comments"></div>
+</section>
+
+<button id="theme-toggle" type="button">🌙 / ☀️ Змінити тему</button>
+
+<footer id="site-footer"></footer>
+
+<div id="modal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <h2>Зворотний зв'язок</h2>
+    <form action="https://formspree.io/f/mljjyjek" method="POST">
+      <input type="text" name="name" placeholder="Ім'я" required><br>
+      <input type="email" name="email" placeholder="Email" required><br>
+      <input type="tel" name="phone" placeholder="Номер телефону" required><br>
+      <textarea name="message" placeholder="Ваше повідомлення" required></textarea><br>
+      <button type="submit">Надіслати</button>
+    </form>
+    <button id="close-modal" type="button">Закрити</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -46,3 +46,37 @@ main section {
     flex-direction: column;
   }
 }
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  justify-content: center;
+}
+.modal-content {
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 8px;
+  width: 320px;
+}
+.modal-content input, .modal-content textarea {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 6px;
+  box-sizing: border-box;
+}
+.comment {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 10px 0;
+}
+body.dark {
+  background: #121212;
+  color: #eee;
+}
+body.dark .comment {
+  border-color: #555;
+}
