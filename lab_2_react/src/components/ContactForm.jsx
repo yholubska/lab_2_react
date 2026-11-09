@@ -5,7 +5,7 @@ function ContactForm() {
 
   useEffect(() => {
     if (sessionStorage.getItem('formClosed')) return;
-    const timer = setTimeout(() => setIsOpen(true), 3000);
+    const timer = setTimeout(() => setIsOpen(true), 60000);
     return () => clearTimeout(timer);
   }, []);
 
